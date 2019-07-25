@@ -33,6 +33,16 @@ def test_molecule_set_coordinates(water_molecule):
     assert new_bonds == 1
     assert np.array_equal(new_coordinates, water_molecule.coordinates)
 
+def test_create_failure():
+    name = 25 
+    symbols = ["H", "O", "H"]
+    coordinates = np.array([[2,0,0],[0, 0, 0],[-2, 0, 0]])
+
+    with pytest.raises(TypeError):
+        water = geometry_analysis.Molecule(name, symbols, coordinates)
+        return water
+
+
 def test_geometry_analysis_imported():
     """Sample test, will always pass so long as import statement worked"""
     assert "geometry_analysis" in sys.modules
