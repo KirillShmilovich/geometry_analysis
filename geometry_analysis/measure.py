@@ -40,6 +40,8 @@ def calculate_angle(rA, rB, rC, degrees=False):
         The x, y, z coordinates of point A
     rB : numpy array
         The x, y, z coordinates of point B
+    rC : numpy array
+        The x, y, z coordinates of point C
     degrees : bool, optional
         Return the calculated angle in degrees.
     
